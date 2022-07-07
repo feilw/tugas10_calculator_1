@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tugas_calculator/hasil.dart';
+import 'package:tugas_calculator/history.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -130,8 +131,16 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-              Row(
-                children: [],
+              SizedBox(height: 10),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HistoryPage()),
+                  );
+                },
+                icon: Icon(Icons.history),
+                alignment: Alignment.centerLeft,
               ),
               SizedBox(height: 30),
               Row(
