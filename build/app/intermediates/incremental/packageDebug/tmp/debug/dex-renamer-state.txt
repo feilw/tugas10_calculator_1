@@ -1,0 +1,4 @@
+#Wed Apr 20 19:39:05 ICT 2022
+base.0=D\:\\Kuliah\\2022\\Masuk 7 Feb\\MobDev\\Pertemuan 9\\tugas_calculator\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
