@@ -13,11 +13,11 @@ class HistoryPage extends StatefulWidget {
 }
 
 class _HistoryPageState extends State<HistoryPage> {
-  List<String> _test = [
-    'dummy 1',
-    'dummy 1',
-    'dummy 1',
-    'dummy 1',
+  List<String> dummy = [
+    // 'dummy 1',
+    // 'dummy 1',
+    // 'dummy 1',
+    // 'dummy 1',
     '1',
     '2',
     '3',
@@ -26,17 +26,15 @@ class _HistoryPageState extends State<HistoryPage> {
     '23',
   ];
 
-
-  // void sortData() {
-  //   if (_history >= '10') {
-  //     print(_history[index].toString());
-  //   }
-  // }
-
-  void dispose() {
-    // _history.dispose();
-    super.dispose();
+  void _delete(int i) async {
+    dummy.removeAt(i);
   }
+
+  //     List<HHasil> _history = [HHasil(angkanya: [i],operatornya: [HHasil.i])];
+  // void dispose() {
+  //   // _history.dispose();
+  //   super.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -64,20 +62,49 @@ class _HistoryPageState extends State<HistoryPage> {
                       child: Text("Back")),
                 ),
               ),
-              Text('Hasil > 10'),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                'Hasil > 10',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: dummy.length,
+                  itemBuilder: (context, i) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(dummy[i]),
+                        IconButton(
+                            icon: const Icon(Icons.delete),
+                            onPressed: () => _delete(i)),
+                      ],
+                    );
+                  },
+                ),
+              ),
               SizedBox(height: 50),
-              Text('All Data'),
-
-              // Expanded(
-              //   child: ListView.builder(
-              //     itemCount: hasilList.length,
-              //     itemBuilder: (context, i) {
-              //       return ListTile(
-              //         title: Text(hasilList[i].title),
-              //       );
-              //     },
-              //   ),
-              // ),
+              Text(
+                'All Data',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: dummy.length,
+                  itemBuilder: (context, i) {
+                    return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(dummy[i]),
+                          IconButton(
+                              icon: const Icon(Icons.delete),
+                              onPressed: () => _delete(i)),
+                        ]);
+                  },
+                ),
+              ),
             ],
           ),
         ),
