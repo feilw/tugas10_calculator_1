@@ -93,6 +93,7 @@ class _MyAppState extends State<MyApp> {
         body: Container(
           padding: EdgeInsets.all(10),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               TextFormField(
                 enabled: false,
@@ -131,263 +132,280 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HistoryPage()),
-                  );
-                },
-                icon: Icon(Icons.history),
-                alignment: Alignment.centerLeft,
-              ),
-              SizedBox(height: 30),
+              SizedBox(height: 5),
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(1);
-                          },
-                          child: Text("1")),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(2);
-                          },
-                          child: Text("2")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(3);
-                          },
-                          child: Text("3")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: plus,
-                          child: Text("+"),
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.orange[400])),
-                    ),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HistoryPage()),
+                      );
+                    },
+                    icon: Icon(Icons.history),
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 5),
               Row(
                 children: [
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(4);
-                          },
-                          child: Text("4")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(5);
-                          },
-                          child: Text("5")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(6);
-                          },
-                          child: Text("6")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                        onPressed: min,
-                        child: Text("-"),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.orange[400]),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(7);
+                                  },
+                                  child: Text("7")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(8);
+                                  },
+                                  child: Text("8")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(9);
+                                  },
+                                  child: Text("9")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: plus,
+                                  child: Text("+"),
+                                  style: ElevatedButton.styleFrom(
+                                      primary: Colors.orange[400])),
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              Row(
-                children: [
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(7);
-                          },
-                          child: Text("7")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(8);
-                          },
-                          child: Text("8")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(9);
-                          },
-                          child: Text("9")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                        onPressed: kali,
-                        child: Text("x"),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.orange[400]),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              Row(
-                children: [
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      flex: 1,
-                      child: ElevatedButton(
-                        onPressed: cc,
-                        child: Text("C"),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.orange[400]),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {
-                            _angka(0);
-                          },
-                          child: Text("0")),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                        onPressed: quad,
-                        child: Text("^"),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.orange[400]),
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: 5),
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      child: ElevatedButton(
-                        onPressed: bagi,
-                        child: Text("/"),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.orange[400]),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              Row(
-                children: [
-                  SizedBox(
-                    height: 70,
-                    width: 70,
-                    child: Expanded(
-                      flex: 2,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          simpanangka.add(int.parse(layar.text));
-                          simpanoperator.add("=");
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => HHasil(
-                                angkanya: simpanangka,
-                                operatornya: simpanoperator,
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(4);
+                                  },
+                                  child: Text("4")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(5);
+                                  },
+                                  child: Text("5")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(6);
+                                  },
+                                  child: Text("6")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                onPressed: min,
+                                child: Text("-"),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.orange[400]),
                               ),
                             ),
-                          ).then((value) => initState());
-                        },
-                        child: Text("="),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.orange[400]),
+                          ),
+                        ],
                       ),
-                    ),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(1);
+                                  },
+                                  child: Text("1")),
+                            ),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(2);
+                                  },
+                                  child: Text("2")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(3);
+                                  },
+                                  child: Text("3")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                onPressed: kali,
+                                child: Text("x"),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.orange[400]),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              flex: 1,
+                              child: ElevatedButton(
+                                onPressed: cc,
+                                child: Text("C"),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.orange[400]),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                  onPressed: () {
+                                    _angka(0);
+                                  },
+                                  child: Text("0")),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                onPressed: quad,
+                                child: Text("^"),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.orange[400]),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          SizedBox(
+                            height: 70,
+                            width: 70,
+                            child: Expanded(
+                              child: ElevatedButton(
+                                onPressed: bagi,
+                                child: Text("/"),
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.orange[400]),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  //   ],
+                  // ),
+                  SizedBox(
+                    height: 10,
+                    width: 5,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 310,
+                        width: 180,
+                        child: Expanded(
+                          flex: 2,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              simpanangka.add(int.parse(layar.text));
+                              simpanoperator.add("=");
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HHasil(
+                                    angkanya: simpanangka,
+                                    operatornya: simpanoperator,
+                                  ),
+                                ),
+                              ).then((value) => initState());
+                            },
+                            child: Text("="),
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.red[900]),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
-              ),
+              )
             ],
           ),
         ),

@@ -13,7 +13,7 @@ class HistoryPage extends StatefulWidget {
 }
 
 class _HistoryPageState extends State<HistoryPage> {
-  List<String> _history = [
+  List<String> _test = [
     'dummy 1',
     'dummy 1',
     'dummy 1',
@@ -25,6 +25,7 @@ class _HistoryPageState extends State<HistoryPage> {
     '11',
     '23',
   ];
+
 
   // void sortData() {
   //   if (_history >= '10') {
@@ -67,21 +68,16 @@ class _HistoryPageState extends State<HistoryPage> {
               SizedBox(height: 50),
               Text('All Data'),
 
-              Expanded(
-                child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: _history.length,
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        title: Text(_history[index]),
-                      );
-                    }),
-              ),
-              // ListView.builder(itemBuilder: (context, index) {
-              //   return ListTile(
-              //     print(sortData()),
-              //   );
-              // })
+              // Expanded(
+              //   child: ListView.builder(
+              //     itemCount: hasilList.length,
+              //     itemBuilder: (context, i) {
+              //       return ListTile(
+              //         title: Text(hasilList[i].title),
+              //       );
+              //     },
+              //   ),
+              // ),
             ],
           ),
         ),
